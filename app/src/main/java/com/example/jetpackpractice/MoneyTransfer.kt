@@ -141,6 +141,7 @@ fun MoneyTransferPage() {
                         ) { Text(text = "Settle Fund") }
                     }
                 }
+                Spacer(modifier = Modifier.height(10.dp))
                 FeaturesGrid()
             }
         }
@@ -167,7 +168,6 @@ fun FeaturesGrid() {
         Features(R.drawable.currency2, "Mail"),
         Features(R.drawable.currency, "Draft")
     )
-
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
