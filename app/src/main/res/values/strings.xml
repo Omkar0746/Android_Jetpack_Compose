@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JetpackPractice</string>
     <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_money_transfer">MoneyTransfer</string>
 </resources>

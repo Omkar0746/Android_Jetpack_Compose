@@ -75,7 +75,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackPracticeTheme {
-                LoginPage()
+               MoneyTransferPage()
             }
         }
     }
@@ -83,7 +83,7 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun LoginPage() {
+fun LoginPage() {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
@@ -235,7 +235,8 @@ private fun LoginPage() {
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color.Transparent
                         ),
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp)
                     ) {
                         Text(
                             text = "Sign In",
