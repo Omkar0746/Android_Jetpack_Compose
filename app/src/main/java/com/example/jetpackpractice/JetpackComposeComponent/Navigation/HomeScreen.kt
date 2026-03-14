@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.JetpackCompose.Navigation
+package com.example.jetpackpractice.JetpackComposeComponent.Navigation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,16 +21,14 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun WelcomeScreenUI(userName: String, navController: NavHostController) {
+fun HomeScreenUI(navController: NavHostController) {
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
+        modifier = Modifier.fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Welcome $userName",
+            text = "Home Screen",
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold
         )
@@ -39,9 +37,7 @@ fun WelcomeScreenUI(userName: String, navController: NavHostController) {
             onClick = {
                 navController.navigate(MyNavRoutes.LoginScreen)
             },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(48.dp),
+            modifier = Modifier.fillMaxWidth().height(48.dp),
             colors = ButtonDefaults.buttonColors(
                 Color.Black
             ),

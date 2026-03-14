@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.JetpackCompose
+package com.example.jetpackpractice.PracticeProject
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -63,7 +63,6 @@ fun LoginPage() {
             .size(300.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-
     ) {
         Card(
             modifier = Modifier

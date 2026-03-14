@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.JetpackCompose
+package com.example.jetpackpractice.JetpackComposeComponent
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.OutlinedTextField

@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.JetpackCompose.Navigation
+package com.example.jetpackpractice.JetpackComposeComponent.Navigation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

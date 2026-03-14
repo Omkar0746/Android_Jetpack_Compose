@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.JetpackCompose
+package com.example.jetpackpractice.JetpackComposeComponent
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.padding

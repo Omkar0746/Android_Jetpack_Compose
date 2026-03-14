@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackPractice">
         <activity
-            android:name=".MoneyTransfer.MoneyTransfer"
+            android:name=".PracticeProject.MoneyTransfer.MoneyTransfer"
             android:exported="false"
             android:label="@string/title_activity_money_transfer"
             android:theme="@style/Theme.JetpackPractice" />

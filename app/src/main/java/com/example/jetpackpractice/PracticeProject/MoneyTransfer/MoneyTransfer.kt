@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.MoneyTransfer
+package com.example.jetpackpractice.PracticeProject.MoneyTransfer
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

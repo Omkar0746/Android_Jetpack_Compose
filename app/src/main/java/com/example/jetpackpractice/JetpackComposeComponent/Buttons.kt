@@ -1,7 +1,5 @@
-package com.example.jetpackpractice.JetpackCompose
+package com.example.jetpackpractice.JetpackComposeComponent
 
-import android.health.connect.datatypes.units.Length
-import android.widget.Button
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement

@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.MoneyTransfer
+package com.example.jetpackpractice.PracticeProject.MoneyTransfer
 
 data class Features(
     var image : Int,
