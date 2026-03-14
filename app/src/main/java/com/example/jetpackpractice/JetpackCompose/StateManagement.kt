@@ -60,7 +60,7 @@ fun StateManagementExample() {
     }
 }
 
-//RememberSavable used to also store the value when the state configuration is changed(like theme change )
+//RememberSavable used to store the value when the state configuration is also changed(like theme change )
 @Composable
 fun RememberSavableExample() {
 

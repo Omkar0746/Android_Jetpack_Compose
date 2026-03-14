@@ -1,10 +1,9 @@
-package com.example.jetpackpractice
+package com.example.jetpackpractice.MoneyTransfer
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,10 +26,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -42,7 +39,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpackpractice.JetpackCompose.ModifiersExample
+import com.example.jetpackpractice.R
 import com.example.jetpackpractice.ui.theme.JetpackPracticeTheme
 
 class MoneyTransfer : ComponentActivity() {
@@ -108,10 +105,15 @@ fun MoneyTransferPage() {
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = "Main Balance", fontWeight = FontWeight.Bold, fontSize = 16.sp
+                            text = "Main Balance",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
                         )
                         Text(
-                            text = "₹ 7.46", fontWeight = FontWeight.Bold, fontSize = 18.sp
+                            text = "₹ 7.46",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 18.sp,
+                            color = Color(0xFF121a83)
                         )
                         Button(
                             onClick = {},
@@ -127,10 +129,15 @@ fun MoneyTransferPage() {
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "AEPS", fontWeight = FontWeight.Bold, fontSize = 16.sp
+                            text = "AEPS",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
                         )
                         Text(
-                            text = "₹ 0.00", fontWeight = FontWeight.Bold, fontSize = 18.sp
+                            text = "₹ 0.00",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 18.sp,
+                            color = Color(0xFF121a83)
                         )
                         Button(
                             onClick = {},
@@ -189,14 +196,17 @@ fun FeaturesGrid() {
                     modifier = Modifier
                         .fillMaxSize()
                         .height(120.dp)
-                        .padding( 10.dp),
+                        .padding(10.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
                         painter = painterResource(features.image),
                         contentDescription = "Feature Logo",
                         Modifier
-                            .background(color = Color(0xFFf8f2ff), shape = RoundedCornerShape(12.dp))
+                            .background(
+                                color = Color(0xFFf8f2ff),
+                                shape = RoundedCornerShape(12.dp)
+                            )
                             .size(50.dp)
                             .padding(10.dp),
                         tint = Color(0xFF121a83)
