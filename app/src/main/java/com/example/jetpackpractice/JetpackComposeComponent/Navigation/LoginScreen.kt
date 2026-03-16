@@ -62,7 +62,13 @@ fun LoginScreenUI(navController: NavHostController) {
         Button(
             onClick = {
 //                navController.navigate(MyNavRoutes.WelcomeScreen)
-                navController.navigate(MyNavRoutes.WelcomeScreenData(userName = userName))
+                navController.navigate(MyNavRoutes.WelcomeScreenData(userName = userName)){
+                    popUpTo(navController.graph.startDestinationId){
+                        saveState = true
+                    }
+                    launchSingleTop = true
+                    restoreState = true
+                }
             },
             modifier = Modifier.fillMaxWidth().height(48.dp),
             colors = ButtonDefaults.buttonColors(

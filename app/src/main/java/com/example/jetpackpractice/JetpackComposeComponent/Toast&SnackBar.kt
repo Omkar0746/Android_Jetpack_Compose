@@ -25,7 +25,8 @@ import kotlinx.coroutines.launch
 fun ToastExample() {
     val context = LocalContext.current
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -46,15 +47,16 @@ fun ToastExample() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun SnackBarExample() {
-    val snackBarHoststate = remember { SnackbarHostState() }
+    val snackBarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     Scaffold(
         snackbarHost = {
-            SnackbarHost(hostState = snackBarHoststate)
+            SnackbarHost(hostState = snackBarHostState)
         }
     ) { innerPadding ->
         Column(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
                 .padding(16.dp)
                 .padding(innerPadding),
             verticalArrangement = Arrangement.Center,
@@ -63,7 +65,7 @@ fun SnackBarExample() {
             Button(
                 onClick = {
                     scope.launch {
-                        snackBarHoststate.showSnackbar(
+                        snackBarHostState.showSnackbar(
                             message = "This is a SnackBar",
                             actionLabel = "UNDO",
                             duration = SnackbarDuration.Short

@@ -37,7 +37,13 @@ fun WelcomeScreenUI(userName: String, navController: NavHostController) {
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = {
-                navController.navigate(MyNavRoutes.LoginScreen)
+                navController.navigate(MyNavRoutes.LoginScreen){
+                    popUpTo(navController.graph.startDestinationId){
+                        saveState = true
+                    }
+                    launchSingleTop = true
+                    restoreState = true
+                }
             },
             modifier = Modifier
                 .fillMaxWidth()

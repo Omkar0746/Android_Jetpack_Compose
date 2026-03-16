@@ -8,8 +8,10 @@ import com.example.jetpackpractice.JetpackComposeComponent.LazyColumnExample
 import com.example.jetpackpractice.JetpackComposeComponent.LazyRowExample
 import com.example.jetpackpractice.JetpackComposeComponent.Navigation.NavGraph
 import com.example.jetpackpractice.JetpackComposeComponent.NestedLazyList
+import com.example.jetpackpractice.JetpackComposeComponent.Scaffold.ScaffoldExample
 import com.example.jetpackpractice.JetpackComposeComponent.SnackBarExample
 import com.example.jetpackpractice.JetpackComposeComponent.ToastExample
+import com.example.jetpackpractice.JetpackComposeComponent.navigation_bar.NavBarNavigation
 import com.example.jetpackpractice.ui.theme.JetpackPracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackPracticeTheme {
-                SnackBarExample()
+                NavBarNavigation()
             }
         }
     }
