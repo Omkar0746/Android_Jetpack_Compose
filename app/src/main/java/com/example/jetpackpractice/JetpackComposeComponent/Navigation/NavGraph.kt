@@ -23,7 +23,7 @@ fun NavGraph() {
             HomeScreenUI(navController)
         }
 
-        //backStackEntry is an lambda function,
+        //backStackEntry is a lambda function,
         // having data and argument and which are pass during navigation
         composable<MyNavRoutes.WelcomeScreenData> { backStackEntry ->
             val data = backStackEntry.toRoute<MyNavRoutes.WelcomeScreenData>()

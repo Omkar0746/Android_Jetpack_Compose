@@ -1,4 +1,4 @@
-package com.example.jetpackpractice.JetpackComposeComponent.navigation_bar
+package com.example.jetpackpractice.JetpackComposeComponent.NavBar
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,9 +15,9 @@ import androidx.navigation.NavHostController
 
 
 @Composable
-fun NavBarNotificationScreen(navController: NavHostController) {
+fun NavBarSearchScreen(navController: NavHostController) {
     Scaffold(
-        bottomBar = { MyNavBar(navController, "Notification") }
+        bottomBar = { MyNavBar(navController, "Search") }
     ) { innerPadding ->
 
         Column(
@@ -26,7 +26,7 @@ fun NavBarNotificationScreen(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Notification Screen",
+                text = "Search Screen",
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold
             )
