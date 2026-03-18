@@ -1,7 +1,6 @@
 package com.example.jetpackpractice.PracticeProject
 
 import androidx.compose.animation.core.Animatable
-
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box

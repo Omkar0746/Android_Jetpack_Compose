@@ -2,4 +2,11 @@
 <resources>
 
     <style name="Theme.JetpackPractice" parent="android:Theme.Material.Light.NoActionBar" />
+    
+    <style name="Theme.JetpackPractice.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/light_purple</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen_logo</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.JetpackPractice</item>
+    </style>
 </resources>
