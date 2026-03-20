@@ -31,8 +31,8 @@ import com.example.jetpackpractice.PracticeProject.CustomizeNavBar.Screens.Profi
 @Composable
 fun UINavigation() {
     val navController = rememberNavController()
-    var openExitDialog by remember { mutableStateOf(false) }
 
+    var openExitDialog by remember { mutableStateOf(false) }
     val context = LocalContext.current
     val activity = context as? Activity
 
