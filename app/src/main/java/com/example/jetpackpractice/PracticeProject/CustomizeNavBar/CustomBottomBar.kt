@@ -17,25 +17,28 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
 
 
 data class NavItem(
     val icon: ImageVector,
-    val label: String
+    val routes : String
 )
 
 private val navItems = listOf(
+    NavItem(Icons.Default.Home, "Home"),
     NavItem(Icons.Default.ShoppingCart, "Cart"),
     NavItem(Icons.Default.Person, "Profile"),
-    NavItem(Icons.Default.Home, "Home"),
     NavItem(Icons.Default.Menu, "Menu")
 )
 
-@Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun CustomBottomBar() {
+fun CustomBottomBar(navController: NavHostController) {
 
-    var selectedIndex by remember { mutableStateOf(0) }
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+    val selectedIndex = navItems.indexOfFirst { item -> item.routes == currentRoute }.coerceAtLeast(0)
 
     val animatedIndex by animateFloatAsState(
         targetValue = selectedIndex.toFloat(),
@@ -135,15 +138,22 @@ fun CustomBottomBar() {
                 )
 
                 IconButton(
-                    onClick = { selectedIndex = index }
+                    onClick = {
+                        navController.navigate(item.routes){
+                            popUpTo (navController.graph.startDestinationId) {
+                                saveState = true
+                            }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
                 ) {
-
                     Box(
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = item.icon,
-                            contentDescription = item.label,
+                            contentDescription = item.routes,
                             tint = Color.White,
                             modifier = Modifier.scale(scale)
                         )
